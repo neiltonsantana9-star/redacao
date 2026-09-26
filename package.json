@@ -1,0 +1,25 @@
+{
+  "name": "redacoes",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Corretor de redações: foto -> OCR -> erros ortográficos, coesão e semântica + atividades por turma",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n server,client -c blue,green \"npm run dev -w server\" \"npm run dev -w client\"",
+    "seed": "npm run seed -w server",
+    "build": "npm run build -w client",
+    "start": "npm run start -w server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "allowScripts": {
+    "esbuild@0.21.5": true
+  }
+}

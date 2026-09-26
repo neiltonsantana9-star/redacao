@@ -1,0 +1,11 @@
+node_modules
+client/dist
+server/data
+logs
+*.log
+.env
+.git
+.dockerignore
+README.md
+iniciar.bat
+client/scripts
